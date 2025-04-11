@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+    <!-- Configuración básica -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Metadatos básicos de SEO -->
+    <title>The Sisterhood Clip® - Página Oficial</title>
+    <meta name="description" content="Lorem ipsum" />
+    <meta name="keywords" content="keyword1, keyword2, keyword 3" />
+    <meta name="author" content="The Sisterhood Clip S.L." />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="The Sisterhood Clip® - Página Oficial" />
+    <meta property="og:description"
+        content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum in facilis cum iure enim iusto ullam voluptate blanditiis et quae mollitia, sed facere cupiditate. Quaerat praesentium iure dolores illum laudantium." />
+    <meta property="og:image" content="/assets/meta/opengraph/opengraph.png" />
+    <meta property="og:image:secure_url" content="/assets/meta/opengraph/opengraph.png" />
+    <meta property="og:image:alt" content="Logo de The Sisterhood Clip" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="The Sisterhood Clip" />
+    <meta property="og:url" content="/index.html" />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Favicon y Web App Manifest -->
+    <link rel="icon" type="image/x-icon" href="/assets/meta/favicon/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/meta/favicon/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/meta/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/meta/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/meta/favicon/favicon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/meta/favicon/favicon-512x512.png" />
+    <link rel="icon" type="image/svg+xml" href="/assets/meta/favicon/favicon.svg" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/meta/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="The Sisterhood Clip" />
+
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/homepage.css" />
+
+    <!-- Componentes -->
+    <script src="/components/common/tsc-header.js" defer></script>
+    <script src="/components/common/tsc-footer.js" defer></script>
+
+    <!-- Scripts -->
+    <script type="module" src="/js/common/header.js" defer></script>
+    <script src="/js/homepage.js" defer></script>
+</head>
+<body>
+    <header>
+        <tsc-header></tsc-header>
+    </header>
+
+    <main>
+        <!-- Hero vídeo -->
+        <section class="hero-video">
+            <video class="hero-video-bg" autoplay muted loop playsinline>
+                <source src="/assets/video/hero.mp4" type="video/mp4">
+            </video>
+            <div class="hero-content">
+                <h1>Bienvenid@ a <br> The Sisterhood Clip</h1>
+                <p>Tu esencia está en los detalles</p>
+                <a class="boton-cta" href="#catalogoGamas">Descubre tu nuevo favorito</a>
+            </div>
+        </section>
+
+        <!-- Catálogo de Gamas -->
+        <section id="catalogoGamas">
+            <h2 id="encabezadoGamas">Nuestras Gamas de Productos</h2>
+            <div class="tarjetas-container">
+                <a href="/html/e-commerce/categories/clasica.html" class="tarjeta">
+                    <img src="/assets/images/homepage/gama-clasica.webp" alt="Imagen 1">
+                    <div class="filtro"></div>
+                    <div class="texto">Clásica</div>
+                </a>
+                <a href="/html/e-commerce/categories/colorpulse.html" class="tarjeta">
+                    <img src="/assets/images/homepage/gama-colorpulse.webp" alt="Imagen 1">
+                    <div class="filtro"></div>
+                    <div class="texto">Color Pulse</div>
+                </a>
+                <a href="/html/e-commerce/categories/exclusive.html" class="tarjeta">
+                    <img src="/assets/images/homepage/gama-exclusiva.webp" alt="Imagen 1">
+                    <div class="filtro"></div>
+                    <div class="texto">Exclusiva</div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Sobre Nosotros -->
+        <section id="sobreNosotros">
+            <div class="contenido">
+                <h2 id="encabezadoSobreNosotros">Sobre la Marca</h2>
+                <p>
+                    Hecho para ti, pensado en cada detalle.<br>
+                    <b>En The Sisterhood Clip no solo diseñamos accesorios para el cabello, creamos piezas que cuentan
+                        tu historia.</b> Cada clip, diadema y broche está pensado para que te expreses a través de los
+                    detalles. En un mundo donde la moda se repite y las tendencias son fugaces, apostamos por la
+                    autenticidad: accesorios con identidad, diseñados para destacar sin esfuerzo.<br>
+                    Materiales de calidad, acabados impecables y un diseño que fusiona lo clásico con lo inesperado. No
+                    sigas la corriente. <b>Redefine tu estilo con piezas que hablan por ti.</b>
+                </p>
+                <a href="/html/about/nosotros.html" class="boton-cta">Saber más</a>
+            </div>
+        </section>
+
+        <!-- Sabías que... -->
+        <section id="sabiasQue">
+            <img src="/assets/images/homepage/sabias-que.webp" alt="Imagen de una chica">
+            <div>
+                <h2 id="encabezadoSabiasQue">¿Sabías que...?</h2>
+                <p>
+                    En The Sisterhood Clip, cada accesorio se elabora con <b>materiales premium</b> y
+                    <b>acabados impecables</b>, diseñados para resistir el uso diario sin perder su encanto.
+                    Con <b>texturas suaves</b>, brillos elegantes y un <b>ajuste perfecto</b>,
+                    cada pieza realza tu estilo y te acompaña en cualquier ocasión.
+                </p>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section id="newsletter">
+            <div class="newsletter-contenido">
+                <h2 id="encabezadoNewsletter">Suscríbete y consigue tu -20%</h2>
+                <p>Vas a recibir novedades, descuentos y consejos de utilidad para cuidar tu cabello, con mucho amor.
+                </p>
+                <form action="#" class="newsletter-form">
+                    <label for="email" class="sr-only">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="Correo electrónico" required
+                        aria-label="Introduce tu correo electrónico" />
+                    <button type="submit">Recoger cupón</button>
+                </form>
+                <small class="newsletter-disclaimer">
+                    Al unirte aceptas recibir comunicaciones comerciales de <strong>The Sisterhood Clip S.L.</strong>
+                    Puedes retirar tu consentimiento cuando quieras.
+                </small>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <tsc-footer></tsc-footer>
+    </footer>
+</body>
+</html>

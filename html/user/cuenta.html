@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+    <!-- Configuración básica -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Metadatos básicos de SEO -->
+    <title>Mi Cuenta - The Sisterhood Clip</title>
+    <meta name="description" content="Lorem ipsum" />
+    <meta name="keywords" content="keyword1, keyword2, keyword 3" />
+    <meta name="author" content="The Sisterhood Clip S.L." />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="The Sisterhood Clip® - Página Oficial" />
+    <meta property="og:description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum in facilis cum iure enim iusto ullam voluptate blanditiis et quae mollitia, sed facere cupiditate. Quaerat praesentium iure dolores illum laudantium." />
+    <meta property="og:image" content="/assets/meta/opengraph/opengraph.png" />
+    <meta property="og:image:secure_url" content="/assets/meta/opengraph/opengraph.png" />
+    <meta property="og:image:alt" content="Logo de The Sisterhood Clip" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="The Sisterhood Clip" />
+    <meta property="og:url" content="/html/user/cuenta.html" />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Favicon y Web App Manifest -->
+    <link rel="icon" type="image/x-icon" href="/assets/meta/favicon/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/meta/favicon/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/meta/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/meta/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/meta/favicon/favicon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/meta/favicon/favicon-512x512.png" />
+    <link rel="icon" type="image/svg+xml" href="/assets/meta/favicon/favicon.svg" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/meta/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="The Sisterhood Clip" />
+    
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/user/cuenta.css" />
+
+    <!-- Componentes -->
+    <script src="/components/common/tsc-header.js" defer></script>    
+    <script src="/components/common/tsc-footer.js" defer></script>  
+    <script src="/components/common/tsc-breadcrumbs.js" defer></script>      
+
+    <!-- Scripts -->
+    <script type="module" src="/js/common/header.js" defer></script>
+    <script type="module" src="/js/user/cuenta.js" defer></script>
+</head>
+<body>
+    <header>
+        <tsc-header></tsc-header>
+    </header>
+    
+    <main id="cuenta">
+        <h1>Mi Cuenta</h1>
+        <!-- Información Personal -->
+        <section id="infoPersonal">
+            <form id="formInfoPersonal">
+                <div>
+                    <label for="foto" class="sr-only">Foto de perfil</label>
+                    <img id="foto" src="" alt="Foto de perfil">
+                </div>
+                <div>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" readonly>
+                </div>
+                <div class="botones">
+                    <button type="button" id="editarInfoPersonal">Editar</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Direcció de Envío -->
+        <section id="direccionEnvio">
+            <h2>Dirección de Envío</h2>
+            <form id="formDireccionEnvio">
+                <div>
+                    <label for="nombreCalle">Nombre de la Calle</label>
+                    <input type="text" id="nombreCalle" name="nombreCalle" readonly>
+                </div>
+                <div>
+                    <label for="ciudad">Ciudad</label>
+                    <input type="text" id="ciudad" name="ciudad" readonly>
+                </div>
+                <div>
+                    <label for="codigoPostal">Código Postal</label>
+                    <input type="text" id="codigoPostal" name="codigoPostal" readonly>
+                </div>
+                <div>
+                    <label for="pais">País</label>
+                    <input type="text" id="pais" name="pais" readonly>
+                </div>
+                <div class="botones">
+                    <button type="button" id="editarDireccionEnvio">Editar</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Método de Pago -->
+        <section id="metodoPago">
+            <h2>Método de Pago</h2>
+            <form id="formMetodoPago">
+                <div>
+                    <label for="nombreTitular">Nombre del Titular</label>
+                    <input type="text" id="nombreTitular" name="nombreTitular" readonly>
+                </div>
+                <div>
+                    <label for="fechaCaducidad">Fecha Caducidad</label>
+                    <input type="text" id="fechaCaducidad" name="fechaCaducidad" readonly>
+                </div>
+                <div>
+                    <label for="numeroTarjeta">Número de Tarjeta</label>
+                    <input type="text" id="numeroTarjeta" name="numeroTarjeta" readonly>
+                </div>
+                <div>
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" readonly>
+                </div>
+                <div class="botones">
+                    <button type="button" id="editarMetodoPago">Editar</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Acciones -->
+        <section id="accionesUsuario">
+            <div class="botones">
+                <button type="button" id="cerrarSesion">Cerrar Sesión</button>
+                <button type="button" id="eliminarUsuario">Eliminar Cuenta</button>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <tsc-footer></tsc-footer>
+    </footer>
+</body>
+</html>

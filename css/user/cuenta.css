@@ -1,0 +1,264 @@
+/* --- CONTENEDOR PRINCIPAL SOLO PARA LA PÁGINA DE CUENTA --- */
+main#cuenta {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* --- TÍTULOS (Solo dentro del main#cuenta) --- */
+main#cuenta h1, 
+main#cuenta h2 {
+  font-family: 'Playfair Display', serif;
+  color: #4a2c2a;
+}
+
+main#cuenta h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+main#cuenta h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* --- SECCIONES COMO TARJETAS (Solo dentro de la página de cuenta) --- */
+main#cuenta section {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+/* --- FORMULARIOS DENTRO DE LA CUENTA --- */
+main#cuenta form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* --- INPUTS SOLO PARA FORMULARIOS DENTRO DE #cuenta --- */
+main#cuenta input {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-family: 'EB Garamond', serif;
+  border: 1px solid #d1b7a1;
+  border-radius: 10px;
+  background: rgba(250, 245, 240, 0.5);
+  transition: all 0.3s ease;
+}
+
+main#cuenta input[readonly] {
+  background: rgba(245, 240, 235, 0.5);
+  border-style: dashed;
+  cursor: not-allowed;
+}
+
+/* --- BOTONES SOLO PARA LA PÁGINA DE CUENTA --- */
+main#cuenta .botones {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+main#cuenta button {
+  background-color: #670b1b;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+main#cuenta button:hover {
+  background-color: #4b0713;
+  transform: translateY(-2px);
+}
+
+/* --- BOTÓN ELIMINAR CUENTA (Color rojo específico) --- */
+main#cuenta #eliminarUsuario {
+  background-color: #a12424;
+}
+
+main#cuenta #eliminarUsuario:hover {
+  background-color: #7d1818;
+}
+
+/* --- FOTO DE PERFIL (Solo dentro de #cuenta) --- */
+main#cuenta #foto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 1rem;
+  border: 3px solid #d1b7a1;
+}
+
+/* --- RESPONSIVE: AJUSTES PARA MÓVIL --- */
+@media (max-width: 600px) {
+  main#cuenta {
+    padding: 1.5rem;
+  }
+
+  main#cuenta section {
+    padding: 1.5rem;
+  }
+
+  main#cuenta h1 {
+    font-size: 2rem;
+  }
+
+  main#cuenta h2 {
+    font-size: 1.5rem;
+  }
+
+  main#cuenta .botones {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  main#cuenta button {
+    width: 100%;
+  }
+}
+/* --- CONTENEDOR PRINCIPAL SOLO PARA LA PÁGINA DE CUENTA --- */
+main#cuenta {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* --- TÍTULOS (Solo dentro del main#cuenta) --- */
+main#cuenta h1, 
+main#cuenta h2 {
+  font-family: 'Playfair Display', serif;
+  color: #4a2c2a;
+}
+
+main#cuenta h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+main#cuenta h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* --- SECCIONES COMO TARJETAS (Solo dentro de la página de cuenta) --- */
+main#cuenta section {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+/* --- FORMULARIOS DENTRO DE LA CUENTA --- */
+main#cuenta form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* --- INPUTS SOLO PARA FORMULARIOS DENTRO DE #cuenta --- */
+main#cuenta input {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-family: 'EB Garamond', serif;
+  border: 1px solid #d1b7a1;
+  border-radius: 10px;
+  background: rgba(250, 245, 240, 0.5);
+  transition: all 0.3s ease;
+}
+
+main#cuenta input[readonly] {
+  background: rgba(245, 240, 235, 0.5);
+  border-style: dashed;
+  cursor: not-allowed;
+}
+
+/* --- BOTONES SOLO PARA LA PÁGINA DE CUENTA --- */
+main#cuenta .botones {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+main#cuenta button {
+  background-color: #670b1b;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+main#cuenta button:hover {
+  background-color: #4b0713;
+  transform: translateY(-2px);
+}
+
+/* --- BOTÓN ELIMINAR CUENTA (Color rojo específico) --- */
+main#cuenta #eliminarUsuario {
+  background-color: #a12424;
+}
+
+main#cuenta #eliminarUsuario:hover {
+  background-color: #7d1818;
+}
+
+/* --- FOTO DE PERFIL (Solo dentro de #cuenta) --- */
+main#cuenta #foto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 1rem;
+  border: 3px solid #d1b7a1;
+}
+
+/* --- RESPONSIVE: AJUSTES PARA MÓVIL --- */
+@media (max-width: 600px) {
+  main#cuenta {
+    padding: 1.5rem;
+  }
+
+  main#cuenta section {
+    padding: 1.5rem;
+  }
+
+  main#cuenta h1 {
+    font-size: 2rem;
+  }
+
+  main#cuenta h2 {
+    font-size: 1.5rem;
+  }
+
+  main#cuenta .botones {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  main#cuenta button {
+    width: 100%;
+  }
+}

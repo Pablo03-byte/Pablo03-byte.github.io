@@ -1,0 +1,123 @@
+/* --- IMPORTAMOS FUENTES VINTAGE --- */
+/* --- IMPORTAMOS FUENTES VINTAGE --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=EB+Garamond:wght@400;500&display=swap');
+
+/* --- ESTILO GENERAL --- */
+body {
+  background: linear-gradient(to bottom, #f9f6f3, #f3ebe7);
+  font-family: 'EB Garamond', serif;
+  color: #3a2b2a;
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+#sobre-nosotros {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* --- TITULOS GENERALES --- */
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  font-weight: 700;
+  color: #4a2c2a;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+/* Decoración sutil en el h1 */
+h1::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  background-color: #4a2c2a;
+  margin: 0.5rem auto 0;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* --- INTRODUCCIÓN --- */
+.intro {
+  text-align: center;
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* --- SECCIÓN DE HISTORIA (FLEXBOX) --- */
+.historia {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.historia .contenido {
+  flex: 1;
+}
+
+.historia .imagen {
+  flex: 1;
+  text-align: center;
+}
+
+.historia img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* --- SECCIONES DE ESTILO Y COMUNIDAD --- */
+.estilo, .comunidad {
+  text-align: center;
+  margin-top: 4rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- EFECTO FADE-IN AL HACER SCROLL --- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- RESPONSIVE: APILAR EN MÓVIL --- */
+@media (max-width: 768px) {
+  #sobre-nosotros {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .historia {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .historia .imagen {
+    margin-top: 1.5rem;
+  }
+}

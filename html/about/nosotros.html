@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+    <!-- Configuración básica -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Metadatos básicos de SEO -->
+    <title>Sobre Nosotros - The Sisterhood Clip</title>
+    <meta name="description" content="Lorem ipsum" />
+    <meta name="keywords" content="keyword1, keyword2, keyword 3" />
+    <meta name="author" content="The Sisterhood Clip S.L." />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="The Sisterhood Clip® - Página Oficial" />
+    <meta property="og:description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum in facilis cum iure enim iusto ullam voluptate blanditiis et quae mollitia, sed facere cupiditate. Quaerat praesentium iure dolores illum laudantium." />
+    <meta property="og:image" content="/assets/meta/opengraph/opengraph.png" />
+    <meta property="og:image:secure_url" content="/assets/meta/opengraph/opengraph.png" />
+    <meta property="og:image:alt" content="Logo de The Sisterhood Clip" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="The Sisterhood Clip" />
+    <meta property="og:url" content="/index.html" />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Favicon y Web App Manifest -->
+    <link rel="icon" type="image/x-icon" href="/assets/meta/favicon/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/meta/favicon/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/meta/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/meta/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/meta/favicon/favicon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/meta/favicon/favicon-512x512.png" />
+    <link rel="icon" type="image/svg+xml" href="/assets/meta/favicon/favicon.svg" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/meta/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="The Sisterhood Clip" />
+
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/about/nosotros.css" />
+
+    <!-- Componentes -->
+    <script src="/components/common/tsc-header.js" defer></script>    
+    <script src="/components/common/tsc-footer.js" defer></script>    
+    <script src="/components/common/tsc-breadcrumbs.js" defer></script>    
+
+
+    <!-- Scripts -->
+    <script type="module" src="/js/common/header.js" defer></script>
+</head>
+<body>
+    <header>
+        <tsc-header></tsc-header>
+    </header>
+    
+    <main id="sobre-nosotros">
+        <section class="intro">
+          <h1>SOBRE NOSOTROS</h1>
+          <p class="fade-in">
+            The Sisterhood Clip nació de una idea clara: <strong>los accesorios para el cabello merecen volver a brillar</strong>. 
+            Somos una marca que rescata lo clásico y lo reinventa, porque sabemos que el estilo está en los detalles.
+          </p>
+        </section>
+      
+        <section class="historia fade-in">
+          <div class="contenido">
+            <h2>DETRÁS DE LA MARCA</h2>
+            <p>
+              Detrás de todo esto está <strong>Lourdes Orellano</strong>, una joven de 22 años, estudiante de Marketing, apasionada por la moda y la comunicación. 
+              <strong>Observando cómo los accesorios para el cabello habían perdido protagonismo y calidad en el mundo de la moda, 
+              Lourdes decidió crear una marca que recuperara su esencia, ofreciendo diseños que combinan lo clásico con lo innovador.</strong>
+            </p>
+          </div>
+          <div class="imagen">
+            <img src="/assets/images/about/chica.webp" alt="Imagen de una chica">
+          </div>
+        </section>
+      
+        <section class="estilo fade-in">
+          <h2>CREEMOS QUE EL ESTILO ES UNA ACTITUD</h2>
+          <p>
+            Sabemos que un buen accesorio puede transformar por completo un look. No importa si estás en la oficina, en una reunión importante, 
+            en la universidad o de copas con amigas: los detalles hablan por ti. Y queremos que hablen bien.
+          </p>
+          <p>
+            Por eso, en <strong>The Sisterhood Clip</strong> diseñamos piezas que combinan lo clásico con lo inesperado. Materiales de calidad, 
+            acabados impecables y ese toque especial que hace que cada accesorio sea más que un simple complemento.
+          </p>
+        </section>
+      
+        <section class="comunidad fade-in">
+          <h2>UNA COMUNIDAD QUE AMA LOS DETALLES</h2>
+          <p>
+            Nos encanta conectar con mujeres que buscan algo más en la moda: autenticidad, estilo propio y un equilibrio entre lo sofisticado y lo versátil. 
+            Si eres de las que creen que los accesorios pueden elevar cualquier look, entonces ya formas parte de esta comunidad.
+          </p>
+          <p>
+            Bienvenida a <strong>The Sisterhood Clip</strong>, donde cada pieza está pensada para hacerte destacar sin esfuerzo.
+          </p>
+        </section>
+      </main>
+    
+    <footer>
+        <tsc-footer></tsc-footer>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const fadeElements = document.querySelectorAll(".fade-in");
+      
+          const observer = new IntersectionObserver(
+            (entries, observer) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("visible");
+                  observer.unobserve(entry.target); // Para que solo ocurra una vez
+                }
+              });
+            },
+            { threshold: 0.2 } // Activa la animación cuando el 20% del elemento es visible
+          );
+      
+          fadeElements.forEach(element => {
+            observer.observe(element);
+          });
+        });
+      </script>
+</body>
+</html>

@@ -41,6 +41,7 @@
     <!-- Hojas de estilo -->
     <link rel="stylesheet" href="/css/global.css" />
     <link rel="stylesheet" href="/css/homepage.css" />
+    <link rel="stylesheet" href="/css/user/cookies.css" />
 
     <!-- Componentes -->
     <script src="/components/common/tsc-header.js" defer></script>
@@ -139,7 +140,45 @@
                 </small>
             </div>
         </section>
+
+        <section>
+            <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-banner-content">
+            <h2>Preferencias de cookies</h2>
+            <p>
+            Utilizamos cookies propias y de terceros para conocer los usos de nuestra tienda online y poder mejorarla, 
+            adaptar el contenido a tus gustos y personalizar nuestros anuncios, marketing y publicaciones en redes sociales. 
+            Puedes aceptarlas todas, rechazarlas o elegir tu configuración pulsando los botones correspondientes. 
+            Ten en cuenta que rechazar las cookies puede afectar a tu experiencia de compra. Para más información puedes 
+            consultar nuestra <a href="#" target="_blank">Política de cookies</a>.
+            </p>
+            <div class="cookie-banner-buttons">
+            <button onclick="acceptCookies()">Aceptar todas</button>
+            <button onclick="rejectCookies()">Rechazar todas</button>
+            <a href="/html/user/confiCookies.html" class="cookie-btn">Configuración de cookies</a>
+            </div>
+            <label class="cookie-checkbox">
+            <input type="checkbox" id="comunicaciones" checked>
+            Acepto el envío de comunicaciones comerciales
+            </label>
+        </div>
+        </div>
+
+        </section>
+    
     </main>
+
+        <script>
+            function acceptCookies() {
+            document.getElementById('cookie-banner').style.display = 'none';
+            // Aquí puedes guardar la preferencia en localStorage o cookies
+            }
+
+            function rejectCookies() {
+            document.getElementById('cookie-banner').style.display = 'none';
+            // Aquí puedes guardar la preferencia en localStorage o cookies
+            }
+        </script>
 
     <footer>
         <tsc-footer></tsc-footer>

@@ -1,0 +1,63 @@
+.cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ef4a8e;
+  color: #fff;
+  border-radius: 30px;
+  padding: 32px 28px 20px 28px;
+  max-width: 600px;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.12);
+  z-index: 9999;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.cookie-banner-content h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.cookie-banner-content p {
+  font-size: 1em;
+  margin-bottom: 18px;
+}
+
+.cookie-banner-content a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.cookie-banner-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.cookie-banner-buttons button {
+  background: #f7eedc;
+  color: #ef4a8e;
+  border: none;
+  border-radius: 16px;
+  padding: 8px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cookie-banner-buttons button:hover {
+  background: #fff2e5;
+}
+
+.cookie-checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 0.95em;
+  margin-top: 8px;
+}
+
+.cookie-checkbox input[type="checkbox"] {
+  accent-color: #ef4a8e;
+  margin-right: 8px;
+}

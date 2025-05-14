@@ -1,9 +1,42 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/montserrat-variable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Yeseva One";
+  src: url("/assets/fonts/yeseva-one-regular.woff2") format("woff2");
+}
+
 /* 1️⃣ Hero video */
-.hero-video {
-  position: relative;
+
+* body {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+* h1, h2, h3, h4, h5, h6 {
+  font-family: "Yeseva One", Arial, Helvetica, sans-serif;
+}
+
+.hero-banner {
+  position: relative; /* Asegura que los hijos absolutos se posicionen respecto a este contenedor */
   width: 100%;
   height: 100vh;      /* Ocupa toda la altura del viewport */
   overflow: hidden;
+}
+
+.cookie-config-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100; /* Asegúrate de que esté por encima de la imagen */
+  background: rgba(255,255,255,0.97);
+  padding: 32px 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  max-width: 90vw;
+  width: 800px;
 }
 
 /* Video de fondo */
@@ -52,7 +85,6 @@
   z-index: 1;  /* Asegura que esté encima del overlay */
   max-width: 90%; /* Pequeño margen interno en pantallas más chicas */
   margin: 0 auto;
-  font-family: 'Playfair Display', serif; /* Ejemplo de fuente con aire vintage */
 }
 
 /* Título principal */
@@ -267,59 +299,85 @@
 
 /* 3️⃣ Sobre Nosotros */
 #sobreNosotros {
-  width: 100%;
-  background-color: #f5ece2; /* beige vintage */
-  
-  /* Espacio vertical para que “respire” */
-  padding: 6rem 1rem;
-  box-sizing: border-box;
+  background: #f7ecdb;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
 }
 
-/* El div interno “contenido” está centrado y limitado en ancho */
-#sobreNosotros .contenido {
-  max-width: 800px;      /* Ajusta según el layout deseado */
-  margin: 0 auto;        /* para centrarlo */
-  text-align: center;    /* si quieres texto centrado */
+.sobre-nosotros-container {
+  display: flex;
+  max-width: 1250px;
+  width: 95%;
+  align-items: center;
+  gap: 36px;
 }
 
-/* Encabezado */
-#encabezadoSobreNosotros {
-  font-size: 2rem;           
-  margin: 0 0 1.5rem 0;       
-  letter-spacing: 1px;        
-  font-weight: 700;
-  position: relative;
-}
-
-/* Detalle decorativo debajo del h2 (opcional) */
-#encabezadoSobreNosotros::after {
-  content: "";
+.sobre-nosotros-img img {
+  width: 300px;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
   display: block;
-  width: 60px;
-  height: 2px;
-  background-color: #670b1b; /* color bordó */
-  margin: 0.5rem auto 0 auto;
 }
 
-/* Párrafo */
-#sobreNosotros p {
+.sobre-nosotros-texto {
+  flex: 1;
+  color: #222;
+}
+
+.sobre-nosotros-texto h2 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 18px;
+  color: #222;
+}
+
+.sobre-nosotros-texto p {
+  font-size: 1.05em;
+  color: #444;
+  margin-bottom: 28px;
   line-height: 1.6;
-  margin-bottom: 2rem;
-  color: #333;
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-  #sobreNosotros {
-    padding: 2rem 1rem;
+.sobre-nosotros-texto b {
+  color: #222;
+}
+
+.boton-cta {
+  background: #f48bbd;
+  color: #670b1b;
+  padding: 12px 32px;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  transition: background 0.2s;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+
+.boton-cta:hover {
+  background: #e06ca6;
+}
+
+@media (max-width: 800px) {
+  .sobre-nosotros-container {
+    flex-direction: column;
+    gap: 18px;
+    text-align: center;
   }
-  #encabezadoSobreNosotros {
-    font-size: 1.8rem;
+  .sobre-nosotros-img img {
+    width: 90vw;
+    max-width: 320px;
+    margin: 0 auto;
   }
-  .boton-cta {
-    padding: 0.7rem 1.2rem;
+  .sobre-nosotros-texto {
+    padding: 0 10px;
   }
 }
+
 
 
 /* 4️⃣ Sabias qué... */
@@ -419,116 +477,140 @@
 
 
 /* 5️⃣ Newsletter */
-#newsletter {
+/* Overlay */
+.newsletter-popup-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+/* Pop-up */
+.newsletter-popup {
+  background: #f7ecdb;
+  border-radius: 12px;
+  max-width: 900px;
+  width: 90vw;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+}
+
+.popup-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 1.8em;
+  color: #222;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+}
+
+.popup-image img {
+  width: 240px;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.popup-info {
+  flex: 1;
+  padding: 32px 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.popup-info h2 {
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.popup-info p {
+  margin: 10px 0 0 0;
+  font-size: 1em;
+  color: #222;
+}
+
+.popup-bold {
+  font-weight: bold;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.popup-form {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.popup-form input[type="email"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
   width: 100%;
-  background-color: #fcd2e3; /* Fondo rosado, ajusta a tu gusto */
-  /* Espacio vertical para que “respire” */
-  padding: 3rem 1rem;
-  box-sizing: border-box;
-  
-  /* Si quieres que en escritorio “pegue” al footer, podrías poner
-     margin-bottom: 0 en el contenedor padre, etc.
-     O, si deseas un hueco: margin-bottom: 2rem; */
+  font-size: 1em;
 }
 
-/* 2) El bloque interno que contiene el texto y formulario */
-.newsletter-contenido {
-  max-width: 600px; /* Ajusta según prefieras */
-  margin: 0 auto;   /* centrar en el espacio horizontal */
-  text-align: center;
+.popup-form button[type="submit"] {
+  background: #f13d84;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 5px;
+  width: 60%;
+  align-self: flex-end;
+  transition: background 0.2s;
 }
 
-/* Encabezado de la newsletter */
-#encabezadoNewsletter {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  letter-spacing: 1px;
-  font-weight: 700;
-  color: #000;
+.popup-form button[type="submit"]:hover {
+  background: #f13d84;
 }
 
-/* Texto introductorio */
-#newsletter p {
-  margin-bottom: 2rem;
-  line-height: 1.6;
+.popup-checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 8px;
+  font-size: 0.92em;
   color: #444;
 }
 
-/* Formulario */
-.newsletter-form {
+.popup-checkboxes label {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center; /* centramos el input y botón en la columna */
-  margin-bottom: 1rem;
+  align-items: center;
+  gap: 6px;
 }
 
-/* Ocultar la etiqueta visualmente, pero accesible para lectores de pantalla */
-.sr-only {
-  position: absolute !important;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(1px,1px,1px,1px);
-}
-
-/* Input y botón ocupan todo el ancho disponible del contenedor */
-.newsletter-form input[type="email"],
-.newsletter-form button {
-  width: 100%;
-  max-width: 400px; /* Opcional: si no lo quieres tan ancho en pantallas grandes */
-}
-
-/* Input de correo */
-.newsletter-form input[type="email"] {
-  padding: 0.8rem 1rem;
-  border-radius: 25px;
-  border: 2px solid #f3d1da;
-  background-color: #fdf9f9;
-  font-size: 1rem;
-  color: #333;
-  text-align: center;
-  transition: border-color 0.3s ease;
-  outline: none;
-  margin: 0;
-}
-
-.newsletter-form input[type="email"]:focus {
-  border-color: #f7b7c9;
-}
-
-/* Botón CTA */
-.newsletter-form button {
-  background-color: #670b1b; /* Bordó */
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 600;
-  padding: 0.8rem 1.6rem;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  margin: 0;
-}
-
-.newsletter-form button:hover {
-  background-color: #4b0713;
-  transform: translateY(-2px);
-}
-
-/* Disclaimer */
-.newsletter-disclaimer {
-  display: block;
-  font-size: 0.75rem;
-  color: #666;
-  line-height: 1.4;
-  max-width: 400px;
-  margin: 1rem auto 0 auto; /* centrado, un poco de separación arriba */
-}
-
-/* Responsividad básica */
-@media (max-width: 480px) {
-  #encabezadoNewsletter {
-    font-size: 1.6rem;
+/* Responsive */
+@media (max-width: 700px) {
+  .popup-content {
+    flex-direction: column;
+  }
+  .popup-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  .popup-info {
+    padding: 20px;
   }
 }

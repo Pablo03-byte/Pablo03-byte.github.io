@@ -50,6 +50,8 @@
     <!-- Scripts -->
     <script type="module" src="/js/common/header.js" defer></script>
     <script src="/js/homepage.js" defer></script>
+    <script src="/js/user/cookies.js"></script>
+    <script src="/js/user/newsletter.js"></script>
 </head>
 <body>
     <header>
@@ -57,11 +59,9 @@
     </header>
 
     <main>
-        <!-- Hero vídeo -->
-        <section class="hero-video">
-            <video class="hero-video-bg" autoplay muted loop playsinline>
-                <source src="/assets/video/hero.mp4" type="video/mp4">
-            </video>
+        <!-- Hero banner -->
+        <section class="hero-banner">
+                <img src="/assets/images/homepage/home-hero banner.png" alt="imagen principal">
             <div class="hero-content">
                 <h1>Bienvenid@ a <br> The Sisterhood Clip</h1>
                 <p>Tu esencia está en los detalles</p>
@@ -69,42 +69,46 @@
             </div>
         </section>
 
+        <!-- Sobre Nosotros -->
+        <section id="sobreNosotros">
+            <div class="sobre-nosotros-container">
+                <div class="sobre-nosotros-img">
+                <img src="/assets/images/homepage/home-sobre la marca.png" alt="Imagen de una chica">
+                </div>
+                <div class="sobre-nosotros-texto">
+                <h2>Sé tú, sin filtro. Nosotros ponemos el clip.</h2>
+                <p>
+                    <em>
+                    The Sisterhood Clip nació de una charla entre amigas. De esas que te inspiran, te reflejan y te hacen sentir parte.<br>
+                    Diseñamos pinzas de pelo, gomas, scrunchies y diademas para pelo con carácter, pensadas para acompañarte en tu día a día.<br>
+                    Porque lo que eliges para tu cabello es mucho más que un adorno: <b>es tu forma de expresarte.</b>
+                    </em>
+                </p>
+                <a href="/html/about/nosotros.html" class="boton-cta">Conócenos mejor</a>
+                </div>
+            </div>
+        </section>
+
+        
         <!-- Catálogo de Gamas -->
         <section id="catalogoGamas">
-            <h2 id="encabezadoGamas">Nuestras Gamas de Productos</h2>
+            <h2 id="encabezadoGamas">Encuentra tu accesorio de pelo ideal</h2>
             <div class="tarjetas-container">
                 <a href="/html/e-commerce/categories/clasica.html" class="tarjeta">
-                    <img src="/assets/images/homepage/gama-clasica.webp" alt="Imagen 1">
+                    <img src="/assets/images/homepage/home-categorias producto clásico.png" alt="Imagen 1">
                     <div class="filtro"></div>
                     <div class="texto">Clásica</div>
                 </a>
                 <a href="/html/e-commerce/categories/colorpulse.html" class="tarjeta">
-                    <img src="/assets/images/homepage/gama-colorpulse.webp" alt="Imagen 1">
+                    <img src="/assets/images/homepage/home-categoria productos color pulse.png" alt="Imagen 1">
                     <div class="filtro"></div>
                     <div class="texto">Color Pulse</div>
                 </a>
                 <a href="/html/e-commerce/categories/exclusive.html" class="tarjeta">
-                    <img src="/assets/images/homepage/gama-exclusiva.webp" alt="Imagen 1">
+                    <img src="/assets/images/homepage/home-categorías productos exclusive.png" alt="Imagen 1">
                     <div class="filtro"></div>
                     <div class="texto">Exclusiva</div>
                 </a>
-            </div>
-        </section>
-
-        <!-- Sobre Nosotros -->
-        <section id="sobreNosotros">
-            <div class="contenido">
-                <h2 id="encabezadoSobreNosotros">Sobre la Marca</h2>
-                <p>
-                    Hecho para ti, pensado en cada detalle.<br>
-                    <b>En The Sisterhood Clip no solo diseñamos accesorios para el cabello, creamos piezas que cuentan
-                        tu historia.</b> Cada clip, diadema y broche está pensado para que te expreses a través de los
-                    detalles. En un mundo donde la moda se repite y las tendencias son fugaces, apostamos por la
-                    autenticidad: accesorios con identidad, diseñados para destacar sin esfuerzo.<br>
-                    Materiales de calidad, acabados impecables y un diseño que fusiona lo clásico con lo inesperado. No
-                    sigas la corriente. <b>Redefine tu estilo con piezas que hablan por ti.</b>
-                </p>
-                <a href="/html/about/nosotros.html" class="boton-cta">Saber más</a>
             </div>
         </section>
 
@@ -122,26 +126,47 @@
             </div>
         </section>
 
-        <!-- Newsletter -->
-        <section id="newsletter">
-            <div class="newsletter-contenido">
-                <h2 id="encabezadoNewsletter">Suscríbete y consigue tu -20%</h2>
-                <p>Vas a recibir novedades, descuentos y consejos de utilidad para cuidar tu cabello, con mucho amor.
-                </p>
-                <form action="#" class="newsletter-form">
-                    <label for="email" class="sr-only">Correo electrónico</label>
-                    <input type="email" id="email" name="email" placeholder="Correo electrónico" required
-                        aria-label="Introduce tu correo electrónico" />
-                    <button type="submit">Recoger cupón</button>
-                </form>
-                <small class="newsletter-disclaimer">
-                    Al unirte aceptas recibir comunicaciones comerciales de <strong>The Sisterhood Clip S.L.</strong>
-                    Puedes retirar tu consentimiento cuando quieras.
-                </small>
+            <!-- Newsletter Pop-up -->
+            <div id="newsletter-popup" class="newsletter-popup-overlay">
+            <div class="newsletter-popup">
+                <button class="popup-close" onclick="closeNewsletterPopup()">×</button>
+                <div class="popup-content">
+                <div class="popup-image">
+                    <img src="/assets/images/homepage/newsletter.png" alt="Newsletter regalo" />
+                </div>
+                <div class="popup-info">
+                    <h2>¡Queremos que seas la primera en enterarte!</h2>
+                    <p>
+                    Suscríbete a nuestra newsletter y recibe antes que nadie nuestras novedades de colección, descuentos pensados para ti y los secretos que esconden nuestros accesorios de pelo.<br>
+                    Porque cada pieza dice algo sobre ti, y está hecha para ti.
+                    </p>
+                    <p class="popup-bold">Además, te regalamos un 10% de descuento en tu primera compra</p>
+                    <form class="popup-form" id="newsletter-form">
+                    <input type="email" placeholder="CORREO ELECTRÓNICO" required>
+                    <button type="submit">SUSCRIBIRME</button>
+                    <div class="popup-checkboxes">
+                        <label>
+                        <input type="checkbox" required>
+                        Acepto las Políticas de Privacidad
+                        </label>
+                        <label>
+                        <input type="checkbox" required>
+                        Acepto el envío de comunicaciones comerciales
+                        </label>
+                    </div>
+                    </form>
+                    <div id="newsletter-success" style="display:none; margin-top:20px; color: #27ae60; font-weight: bold;">
+                    ¡Has sido registrado correctamente!
+                    </div>
+                </div>
+                </div>
             </div>
-        </section>
+            </div>
+
+
 
         <section>
+            <!--Cookies-->
             <div id="cookie-banner" class="cookie-banner">
         <div class="cookie-banner-content">
             <h2>Preferencias de cookies</h2>
@@ -155,6 +180,7 @@
             <div class="cookie-banner-buttons">
             <button onclick="acceptCookies()">Aceptar todas</button>
             <button onclick="rejectCookies()">Rechazar todas</button>
+            <!--Enlace Configuración Cookies-->
             <a href="/html/user/confiCookies.html" class="cookie-btn">Configuración de cookies</a>
             </div>
             <label class="cookie-checkbox">
@@ -167,18 +193,6 @@
         </section>
     
     </main>
-
-        <script>
-            function acceptCookies() {
-            document.getElementById('cookie-banner').style.display = 'none';
-            // Aquí puedes guardar la preferencia en localStorage o cookies
-            }
-
-            function rejectCookies() {
-            document.getElementById('cookie-banner').style.display = 'none';
-            // Aquí puedes guardar la preferencia en localStorage o cookies
-            }
-        </script>
 
     <footer>
         <tsc-footer></tsc-footer>

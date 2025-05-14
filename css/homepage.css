@@ -176,126 +176,103 @@
 }
 
 /* 2️⃣ Catálogo de Gamas */
-#catalogoGamas {
-  scroll-margin-top: 100px; /* Ajusta el valor a tu gusto */
-  max-width: 1200px;      /* Para no ocupar toda la pantalla en monitores grandes */
-  margin: 4rem auto;      /* 4rem arriba/abajo, auto para centrar */
-  padding: 0 1.5rem;      /* Espacio a los lados */
-}
-
-#encabezadoGamas {
-  font-size: 2rem; 
-  margin: 0 auto 2rem auto;         /* Quita margen superior extra, 2rem abajo */
+.productos-destacados {
+  background: #f8bcd8;
+  padding: 48px 0 32px 0;
   text-align: center;
-  letter-spacing: 1px;              /* Ligero espaciado de letras */
-  font-weight: 600;                 /* Un peso medio/semibold para hacerlo más elegante */
-  position: relative;
 }
 
-/* Contenedor de tarjetas */
-.tarjetas-container {
+.productos-titulo {
+  font-size: 2.1em;
+  font-family: "Yeseva One", Arial, Helvetica, sans-serif;
+  color: #222;
+  margin-bottom: 36px;
+  border-bottom: 2px solid #222;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.productos-lista {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem; /* más espacio entre tarjetas */
-  max-width: 1200px;
-  margin: 0 auto; /* centrado en la página */
-  padding: 0 1rem;
+  gap: 200px;
+  flex-wrap: wrap;
 }
 
-/* Tarjeta individual */
-.tarjeta {
-  position: relative;
-  width: 350px;
-  height: 500px;
-  border-radius: 50px;
-  overflow: hidden;
-  cursor: pointer;
-  text-decoration: none;
-  /* Opcional: un suave borde “vintage” */
-  /*border: 2px solid var(--color-beige-claro);*/
-
-  /* Transición y pequeña sombra para dar relieve */
- /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);*/
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 230px;
 }
 
-/* Pequeña animación de hover */
-.tarjeta:hover {
-  transform: scale(1.02);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+.producto-circulo {
+  background: #ece4d9;
+  border-radius: 50%;
+  width: 280px;   /* aumenté de 200px a 280px */
+  height: 280px;  /* aumenté de 200px a 280px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
 }
 
-/* Imagen de fondo de la tarjeta */
-.tarjeta img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.producto-circulo img {
+  width: 200px;   /* aumenté de 140px a 200px */
+  height: 200px;  /* aumenté de 140px a 200px */
+  object-fit: contain;
 }
 
-/* Filtro (overlay) degradado para un efecto sutil */
-.filtro {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background: linear-gradient(
-    to top, 
-    var(--color-rosa-claro),
-    rgba(0, 0, 0, 0)
-  );
-  z-index: 1;
+
+.producto-categoria {
+  font-family: "Yeseva One", Arial, Helvetica, sans-serif;
+  font-size: 1.15em;
+  color: #222;
+  margin: 10px 0 16px 0;
 }
 
-/* Texto sobre la imagen */
-.texto {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
+.boton-descubrir {
+  background: #6a0024;
   color: #fff;
-  font-size: 1.5rem;
+  border: none;
+  border-radius: 24px;
+  padding: 10px 30px;
+  font-size: 1em;
+  font-family: "Yeseva One", Arial, Helvetica, sans-serif;
   font-weight: bold;
-  z-index: 2;
+  text-decoration: none;
+  margin-top: 0;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  display: inline-block;
 }
 
-/* Simulación de ruido/grano con un pseudo-elemento */
-.tarjeta::before {
-  content: "";
-  position: absolute;
-  inset: 0; /* top, right, bottom, left = 0 */
-  pointer-events: none;
-  z-index: 1; /* justo detrás del texto pero sobre la imagen */
-  
-  /* Ejemplo de pattern de puntos/radial muy sutil */
-  background: repeating-radial-gradient(
-    rgba(0, 0, 0, 0.02) 0px,
-    rgba(0, 0, 0, 0.02) 1px,
-    transparent 2px,
-    transparent 100%
-  );
-  opacity: .1; /* ajusta la fuerza del grano */
+.boton-descubrir:hover {
+  background: #a80036;
 }
 
-/* Responsivo: en móviles, que las tarjetas ocupen todo el ancho y se ajusten de altura */
-@media (max-width: 768px) {
-  .tarjeta {
-    width: 100%;
-    height: auto;
-    border-radius: 30px;
+@media (max-width: 900px) {
+  .producto-circulo {
+    width: 220px;
+    height: 220px;
   }
-  .tarjeta img {
-    height: auto;
-  }
-  /* El overlay que era 50% de la altura, ahora quizás conviene hacerlo más pequeño o ajustarlo */
-  .filtro {
-    height: 40%;
-  }
-  .texto {
-    font-size: 1.5rem;
+  .producto-circulo img {
+    width: 160px;
+    height: 160px;
   }
 }
+@media (max-width: 600px) {
+  .producto-circulo {
+    width: 180px;
+    height: 180px;
+  }
+  .producto-circulo img {
+    width: 130px;
+    height: 130px;
+  }
+}
+
 
 /* 3️⃣ Sobre Nosotros */
 #sobreNosotros {

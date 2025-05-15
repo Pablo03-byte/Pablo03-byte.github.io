@@ -46,22 +46,25 @@
     <link rel="stylesheet" href="/css/global.css" />
     <link rel="stylesheet" href="/css/homepage.css" />
     <style>
+        .cookie-config-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.97);
+            padding: 32px 24px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            max-width: 90vw;
+            width: 800px;
+        }
+
         body {
             background: #f7f7f7;
             margin: 0;
             padding: 0;
         }
-
-        @font-face {
-        font-family: "Montserrat";
-        src: url("/assets/fonts/montserrat-variable.woff2") format("woff2");
-        }
-
-        @font-face {
-        font-family: "Yeseva One";
-        src: url("/assets/fonts/yeseva-one-regular.woff2") format("woff2");
-        }
-
 
         .cookie-config-container {
             max-width: 600px;
@@ -190,72 +193,75 @@
     </header>
 
     <main>
-        
+
         <main>
-        <!-- Hero banner -->
-        <section class="hero-banner" style="position:relative;">
-            <img src="/assets/images/homepage/home-hero banner.png" alt="imagen principal">
-            <div class="hero-content"></div>
+            <!-- Hero banner -->
+            <section class="hero-banner" style="position:relative;">
+                <img src="/assets/images/homepage/home-hero banner.png" alt="imagen principal">
+                <div class="hero-content"></div>
 
-        <div class="cookie-config-container">
-            <h1>Preferencias de cookies</h1>
-            <p>
-                Usamos cookies para ayudarle a navegar de manera eficiente y realizar ciertas funciones. Entrará
-                información
-                detallada sobre cada una de las cookies bajo cada categoría de consentimiento a continuación.
-            </p>
-            <div class="cookie-category">
-                <div class="cookie-category-title">
-                    Necesarias
-                    <label class="switch">
-                        <input type="checkbox" checked disabled>
-                        <span class="slider"></span>
-                    </label>
-                </div>
-                <div class="cookie-category-desc">
-                    Las cookies necesarias son cruciales para las funciones básicas del sitio web y el sitio web no
-                    funcionará de la
-                    forma prevista sin ellas. Estas cookies no almacenan ningún dato de identificación personal.
-                </div>
-            </div>
-            <div class="cookie-category">
-                <div class="cookie-category-title">
-                    Funcionales
-                    <label class="switch">
+                <div class="cookie-config-container">
+                    <h1>Preferencias de cookies</h1>
+                    <p>
+                        Usamos cookies para ayudarle a navegar de manera eficiente y realizar ciertas funciones. Entrará
+                        información
+                        detallada sobre cada una de las cookies bajo cada categoría de consentimiento a continuación.
+                    </p>
+                    <div class="cookie-category">
+                        <div class="cookie-category-title">
+                            Necesarias
+                            <label class="switch">
+                                <input type="checkbox" checked disabled>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="cookie-category-desc">
+                            Las cookies necesarias son cruciales para las funciones básicas del sitio web y el sitio web
+                            no
+                            funcionará de la
+                            forma prevista sin ellas. Estas cookies no almacenan ningún dato de identificación personal.
+                        </div>
+                    </div>
+                    <div class="cookie-category">
+                        <div class="cookie-category-title">
+                            Funcionales
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="cookie-category-desc">
+                            Las cookies funcionales permiten funcionalidades adicionales y personalización, como
+                            recordar
+                            preferencias. El
+                            sitio web puede no funcionar correctamente sin ellas.
+                        </div>
+                    </div>
+                    <div class="cookie-category">
+                        <div class="cookie-category-title">
+                            Marketing
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="cookie-category-desc">
+                            Las cookies de marketing se utilizan para rastrear a los visitantes en los sitios web y
+                            mostrar
+                            anuncios
+                            relevantes y atractivos.
+                        </div>
+                    </div>
+                    <label class="cookie-checkbox">
                         <input type="checkbox">
-                        <span class="slider"></span>
+                        Acepto el envío de comunicaciones comerciales
                     </label>
                 </div>
-                <div class="cookie-category-desc">
-                    Las cookies funcionales permiten funcionalidades adicionales y personalización, como recordar
-                    preferencias. El
-                    sitio web puede no funcionar correctamente sin ellas.
-                </div>
-            </div>
-            <div class="cookie-category">
-                <div class="cookie-category-title">
-                    Marketing
-                    <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider"></span>
-                    </label>
-                </div>
-                <div class="cookie-category-desc">
-                    Las cookies de marketing se utilizan para rastrear a los visitantes en los sitios web y mostrar
-                    anuncios
-                    relevantes y atractivos.
-                </div>
-            </div>
-            <label class="cookie-checkbox">
-                <input type="checkbox">
-                Acepto el envío de comunicaciones comerciales
-            </label>
-        </div>
-    </main>
+        </main>
 
-    <footer>
-        <tsc-footer></tsc-footer>
-    </footer>
+        <footer>
+            <tsc-footer></tsc-footer>
+        </footer>
 </body>
 
 </html>

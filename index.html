@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es" prefix="og: https://ogp.me/ns#">
+
 <head>
     <!-- Configuración básica -->
     <meta charset="UTF-8" />
@@ -53,6 +54,7 @@
     <script src="/js/user/cookies.js"></script>
     <script src="/js/user/newsletter.js"></script>
 </head>
+
 <body>
     <header>
         <tsc-header></tsc-header>
@@ -61,7 +63,7 @@
     <main>
         <!-- Hero banner -->
         <section class="hero-banner">
-                <img src="/assets/images/homepage/home-hero banner.png" alt="imagen principal">
+            <img src="/assets/images/homepage/home-hero banner.png" alt="imagen principal">
             <div class="hero-content">
                 <h1>Bienvenid@ a <br> The Sisterhood Clip</h1>
                 <p>Tu esencia está en los detalles</p>
@@ -73,49 +75,53 @@
         <section id="sobreNosotros">
             <div class="sobre-nosotros-container">
                 <div class="sobre-nosotros-img">
-                <img src="/assets/images/homepage/home-sobre la marca.png" alt="Imagen de una chica">
+                    <img src="/assets/images/homepage/home-sobre la marca.png" alt="Imagen de una chica">
                 </div>
                 <div class="sobre-nosotros-texto">
-                <h2>Sé tú, sin filtro. Nosotros ponemos el clip.</h2>
-                <p>
-                    <em>
-                    The Sisterhood Clip nació de una charla entre amigas. De esas que te inspiran, te reflejan y te hacen sentir parte.<br>
-                    Diseñamos pinzas de pelo, gomas, scrunchies y diademas para pelo con carácter, pensadas para acompañarte en tu día a día.<br>
-                    Porque lo que eliges para tu cabello es mucho más que un adorno: <b>es tu forma de expresarte.</b>
-                    </em>
-                </p>
-                <a href="/html/about/nosotros.html" class="boton-cta">Conócenos mejor</a>
+                    <h2>Sé tú, sin filtro. Nosotros ponemos el clip.</h2>
+                    <p>
+                        <em>
+                            The Sisterhood Clip nació de una charla entre amigas. De esas que te inspiran, te reflejan y
+                            te hacen sentir parte.<br>
+                            Diseñamos pinzas de pelo, gomas, scrunchies y diademas para pelo con carácter, pensadas para
+                            acompañarte en tu día a día.<br>
+                            Porque lo que eliges para tu cabello es mucho más que un adorno: <b>es tu forma de
+                                expresarte.</b>
+                        </em>
+                    </p>
+                    <a href="/html/about/nosotros.html" class="boton-cta">Conócenos mejor</a>
                 </div>
             </div>
         </section>
 
-        
+
         <!-- Catálogo de Gamas -->
-        <section class="productos-destacados">
+
+        <section id="catalogoGamas" class="productos-destacados">
             <h2 class="productos-titulo">Encuentra tu accesorio de pelo ideal</h2>
             <div class="productos-lista">
                 <!-- Producto 1 -->
                 <div class="producto">
                     <p class="producto-categoria">Clásica</p>
-                <div class="producto-circulo">
-                    <img src="/assets/images/homepage/home-categorias producto clásico.png" alt="Clásica">
-                </div>
+                    <div class="producto-circulo">
+                        <img src="/assets/images/homepage/home-categorias producto clásico.png" alt="Clásica">
+                    </div>
                     <a href="/html/e-commerce/categories/clasica.html" class="boton-descubrir">Descubrir</a>
                 </div>
                 <!-- Producto 2 -->
                 <div class="producto">
                     <p class="producto-categoria">Color Pulse</p>
-                <div class="producto-circulo">
-                    <img src="/assets/images/homepage/home-categoria productos color pulse.png" alt="Color Pulse">
-                </div>
+                    <div class="producto-circulo">
+                        <img src="/assets/images/homepage/home-categoria productos color pulse.png" alt="Color Pulse">
+                    </div>
                     <a href="/html/e-commerce/categories/colorpulse.html" class="boton-descubrir">Descubrir</a>
                 </div>
                 <!-- Producto 3 -->
                 <div class="producto">
                     <p class="producto-categoria">Exclusiva</p>
-                <div class="producto-circulo">
-                    <img src="/assets/images/homepage/home-categorías productos exclusive.png" alt="Exclusiva">
-                </div>
+                    <div class="producto-circulo">
+                        <img src="/assets/images/homepage/home-categorías productos exclusive.png" alt="Exclusiva">
+                    </div>
                     <a href="/html/e-commerce/categories/exclusive.html" class="boton-descubrir">Descubrir</a>
                 </div>
             </div>
@@ -136,76 +142,83 @@
             </div>
         </section>
 
-            <!-- Newsletter Pop-up -->
-            <div id="newsletter-popup-overlay" class="newsletter-popup-overlay">
+        <!-- Newsletter Pop-up -->
+        <div id="newsletter-popup-overlay" class="newsletter-popup-overlay">
             <div id="newsletter-popup" class="newsletter-popup">
                 <button class="popup-close" onclick="closeNewsletterPopup()">×</button>
                 <div class="popup-content">
-                <div class="popup-image">
-                    <img src="/assets/images/homepage/newsletter.png" alt="Newsletter regalo" />
-                </div>
-                <div class="popup-info">
-                    <h2>¡Queremos que seas la primera en enterarte!</h2>
-                    <p>
-                    Suscríbete a nuestra newsletter y recibe antes que nadie nuestras novedades de colección, descuentos pensados para ti y los secretos que esconden nuestros accesorios de pelo.<br>
-                    Porque cada pieza dice algo sobre ti, y está hecha para ti.
-                    </p>
-                    <p class="popup-bold">Además, te regalamos un 10% de descuento en tu primera compra</p>
-                    <form class="popup-form" id="newsletter-form">
-                    <input type="email" placeholder="CORREO ELECTRÓNICO" required>
-                    <button type="submit">SUSCRIBIRME</button>
-                    <div class="popup-checkboxes">
-                        <label>
-                        <input type="checkbox" required>
-                        Acepto las Políticas de Privacidad
-                        </label>
-                        <label>
-                        <input type="checkbox" required>
-                        Acepto el envío de comunicaciones comerciales
-                        </label>
+                    <div class="popup-image">
+                        <img src="/assets/images/homepage/newsletter.png" alt="Newsletter regalo" />
                     </div>
-                    </form>
-                    <div id="newsletter-success" style="display:none; margin-top:20px; color: #27ae60; font-weight: bold;">
-                    ¡Has sido registrado correctamente!
+                    <div class="popup-info">
+                        <h2>¡Queremos que seas la primera en enterarte!</h2>
+                        <p>
+                            Suscríbete a nuestra newsletter y recibe antes que nadie nuestras novedades de colección,
+                            descuentos pensados para ti y los secretos que esconden nuestros accesorios de pelo.<br>
+                            Porque cada pieza dice algo sobre ti, y está hecha para ti.
+                        </p>
+                        <p class="popup-bold">Además, te regalamos un 10% de descuento en tu primera compra</p>
+                        <form class="popup-form" id="newsletter-form">
+                            <input type="email" placeholder="CORREO ELECTRÓNICO" required>
+                            <button type="submit">SUSCRIBIRME</button>
+                            <div class="popup-checkboxes">
+                                <label>
+                                    <input type="checkbox" required>
+                                    Acepto las Políticas de Privacidad
+                                </label>
+                                <label>
+                                    <input type="checkbox" required>
+                                    Acepto el envío de comunicaciones comerciales
+                                </label>
+                            </div>
+                        </form>
+                        <div id="newsletter-success"
+                            style="display:none; margin-top:20px; color: #27ae60; font-weight: bold;">
+                            ¡Has sido registrado correctamente!
+                        </div>
                     </div>
-                </div>
                 </div>
             </div>
-            </div>
+        </div>
 
 
 
         <section>
             <!--Cookies-->
             <div id="cookie-banner" class="cookie-banner">
-        <div class="cookie-banner-content">
-            <h2>Preferencias de cookies</h2>
-            <p>
-            Utilizamos cookies propias y de terceros para conocer los usos de nuestra tienda online y poder mejorarla, 
-            adaptar el contenido a tus gustos y personalizar nuestros anuncios, marketing y publicaciones en redes sociales. 
-            Puedes aceptarlas todas, rechazarlas o elegir tu configuración pulsando los botones correspondientes. 
-            Ten en cuenta que rechazar las cookies puede afectar a tu experiencia de compra. Para más información puedes 
-            consultar nuestra <a href="#" target="_blank">Política de cookies</a>.
-            </p>
-            <div class="cookie-banner-buttons">
-            <button onclick="acceptCookies()">Aceptar todas</button>
-            <button onclick="rejectCookies()">Rechazar todas</button>
-            <!--Enlace Configuración Cookies-->
-            <a href="/html/user/confiCookies.html" class="cookie-btn">Configuración de cookies</a>
+                <div class="cookie-banner-content">
+                    <h2>Preferencias de cookies</h2>
+                    <p>
+                        Utilizamos cookies propias y de terceros para conocer los usos de nuestra tienda online y poder
+                        mejorarla,
+                        adaptar el contenido a tus gustos y personalizar nuestros anuncios, marketing y publicaciones en
+                        redes sociales.
+                        Puedes aceptarlas todas, rechazarlas o elegir tu configuración pulsando los botones
+                        correspondientes.
+                        Ten en cuenta que rechazar las cookies puede afectar a tu experiencia de compra. Para más
+                        información puedes
+                        consultar nuestra <a href="#" target="_blank">Política de cookies</a>.
+                    </p>
+                    <div class="cookie-banner-buttons">
+                        <button onclick="acceptCookies()">Aceptar todas</button>
+                        <button onclick="rejectCookies()">Rechazar todas</button>
+                        <!--Enlace Configuración Cookies-->
+                        <a href="/html/user/confiCookies.html" class="cookie-btn">Configuración de cookies</a>
+                    </div>
+                    <label class="cookie-checkbox">
+                        <input type="checkbox" id="comunicaciones" checked>
+                        Acepto el envío de comunicaciones comerciales
+                    </label>
+                </div>
             </div>
-            <label class="cookie-checkbox">
-            <input type="checkbox" id="comunicaciones" checked>
-            Acepto el envío de comunicaciones comerciales
-            </label>
-        </div>
-        </div>
 
         </section>
-    
+
     </main>
 
     <footer>
         <tsc-footer></tsc-footer>
     </footer>
 </body>
+
 </html>

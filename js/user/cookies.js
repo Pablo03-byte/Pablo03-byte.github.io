@@ -1,11 +1,4 @@
-/*function acceptCookies() {
-  document.getElementById('cookie-banner').style.display = 'none';
-}
 
-function rejectCookies() {
-  document.getElementById('cookie-banner').style.display = 'none';
-}
-*/
 // Mostrar el banner solo si no hay decisión guardada en sessionStorage
 window.addEventListener('DOMContentLoaded', function () {
   if (!sessionStorage.getItem('cookies-decision')) {

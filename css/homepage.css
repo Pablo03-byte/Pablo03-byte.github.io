@@ -1,8 +1,14 @@
+body {
+  overflow-x: hidden;
+}
+
 /* 1️⃣ Hero video */
 .hero-banner {
-  position: relative; /* Asegura que los hijos absolutos se posicionen respecto a este contenedor */
+  position: relative;
+  /* Asegura que los hijos absolutos se posicionen respecto a este contenedor */
   width: 100%;
-  height: 100vh;      /* Ocupa toda la altura del viewport */
+  height: 100vh;
+  /* Ocupa toda la altura del viewport */
   overflow: hidden;
 }
 
@@ -13,18 +19,22 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; 
-  z-index: -2;        /* El video se ubica en el fondo */
-  object-position: center; 
+  object-fit: cover;
+  z-index: -2;
+  /* El video se ubica en el fondo */
+  object-position: center;
 }
 
 /* Overlay sutil para oscurecer y resaltar texto */
 .hero-video::before {
   content: "";
   position: absolute;
-  inset: 0;          /* top, right, bottom, left = 0 */
-  background: rgba(0, 0, 0, 0.3);  /* Ajusta la opacidad/color si lo quieres más claro/oscuro */
-  z-index: -1;       /* Se coloca entre el video y el contenido */
+  inset: 0;
+  /* top, right, bottom, left = 0 */
+  background: rgba(0, 0, 0, 0.3);
+  /* Ajusta la opacidad/color si lo quieres más claro/oscuro */
+  z-index: -1;
+  /* Se coloca entre el video y el contenido */
 }
 
 /* Ajustes para orientación horizontal (opcional) */
@@ -48,9 +58,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: #f0e7db; /* Texto en blanco */
-  z-index: 1;  /* Asegura que esté encima del overlay */
-  max-width: 90%; /* Pequeño margen interno en pantallas más chicas */
+  color: #f0e7db;
+  /* Texto en blanco */
+  z-index: 1;
+  /* Asegura que esté encima del overlay */
+  max-width: 90%;
+  /* Pequeño margen interno en pantallas más chicas */
   margin: 0 auto;
 }
 
@@ -80,14 +93,17 @@
   font-size: 1rem;
   transition: all 0.3s ease;
   /* Vintage pastel para el botón */
-  background-color: var(--color-rosa-claro);    /* Rosa suave */
-  color: var(--color-bordo);              /* Un tono bordó para el texto */
+  background-color: var(--color-rosa-claro);
+  /* Rosa suave */
+  color: var(--color-bordo);
+  /* Un tono bordó para el texto */
   /* Opcional: sutil sombra */
 }
 
 .hero-content a.boton-cta:hover {
   /* Un ligero cambio de color y elevación */
-  background-color: #f7bdce;   /* Un poco más oscuro dentro de la misma gama */
+  background-color: #f7bdce;
+  /* Un poco más oscuro dentro de la misma gama */
   transform: translateY(-2px);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25);
 }
@@ -101,10 +117,13 @@
   }
 
   .hero-content h1 {
-    font-size: 1.8rem; /* Reducimos un poco el tamaño */
-    line-height: 1.2; /* Más compacto */
+    font-size: 1.8rem;
+    /* Reducimos un poco el tamaño */
+    line-height: 1.2;
+    /* Más compacto */
     margin-bottom: 1rem;
-    white-space: nowrap; /* Evita que se parta en dos líneas */
+    white-space: nowrap;
+    /* Evita que se parta en dos líneas */
   }
 
   .hero-content p {
@@ -128,8 +147,10 @@
   }
 
   .hero-content h1 {
-    font-size: 1.6rem; /* Ajustamos aún más para que quepa */
-    white-space: nowrap; /* Se mantiene en una sola línea */
+    font-size: 1.6rem;
+    /* Ajustamos aún más para que quepa */
+    white-space: nowrap;
+    /* Se mantiene en una sola línea */
   }
 
   .hero-content p {
@@ -176,18 +197,22 @@
 .producto-circulo {
   background: #ece4d9;
   border-radius: 50%;
-  width: 280px;   /* aumenté de 200px a 280px */
-  height: 280px;  /* aumenté de 200px a 280px */
+  width: 280px;
+  /* aumenté de 200px a 280px */
+  height: 280px;
+  /* aumenté de 200px a 280px */
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 16px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
 }
 
 .producto-circulo img {
-  width: 200px;   /* aumenté de 140px a 200px */
-  height: 200px;  /* aumenté de 140px a 200px */
+  width: 200px;
+  /* aumenté de 140px a 200px */
+  height: 200px;
+  /* aumenté de 140px a 200px */
   object-fit: contain;
 }
 
@@ -211,7 +236,7 @@
   text-decoration: none;
   margin-top: 0;
   transition: background 0.2s;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
   display: inline-block;
 }
 
@@ -224,16 +249,19 @@
     width: 220px;
     height: 220px;
   }
+
   .producto-circulo img {
     width: 160px;
     height: 160px;
   }
 }
+
 @media (max-width: 600px) {
   .producto-circulo {
     width: 180px;
     height: 180px;
   }
+
   .producto-circulo img {
     width: 130px;
     height: 130px;
@@ -262,7 +290,7 @@
   height: auto;
   border-radius: 4px;
   object-fit: cover;
-  display: block;
+  display: flex;
 }
 
 .sobre-nosotros-texto {
@@ -312,120 +340,131 @@
     gap: 18px;
     text-align: center;
   }
+
   .sobre-nosotros-img img {
     width: 90vw;
     max-width: 320px;
     margin: 0 auto;
   }
+
   .sobre-nosotros-texto {
     padding: 0 10px;
   }
 }
 
 
+/*Sustentabilidad
+/* Hace que la sección ocupe todo el ancho de la pantalla */
+#sustentabilidad {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background: transparent;
+}
 
-/* 4️⃣ Sabias qué... */
-/* Sección "¿Sabías que...?" como un rectángulo con esquinas redondeadas */
-#sabiasQue {
-  /* Centrar opcionalmente en la página y controlar el ancho máximo */
-  width: 80%;
-  max-width: 1200px;
-  margin: 4rem auto;         /* separación vertical y centrado horizontal */
-  
-  /* Fondo y esquinas redondeadas */
-  background-color: #f0e7db; 
-  border-radius: 30px;
-  
-  /* Para que la imagen no sobresalga de las esquinas */
-  overflow: hidden;
-  
-  /* Layout en dos columnas en escritorio */
+/* Contenedor principal en dos columnas */
+.sustentabilidad-container {
   display: flex;
   flex-direction: row;
-  align-items: stretch;  /* Ambas “columnas” igualadas en altura */
-
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
+  width: 100%;
+  min-height: 480px;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: #f7ecdb;
 }
 
-#sabiasQue:hover {
-  transform: scale(1.02);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+/* Imagen a la izquierda */
+.sustentabilidad-img {
+  flex: 1 1 50%;
+  min-width: 400px;
+  max-width: 500px;
+  display: flex;
+  align-items: stretch;
 }
 
-/* Imagen ocupa la mitad izquierda en escritorio */
-#sabiasQue img {
-  width: 50%;
-  height: auto;         /* se ajusta manteniendo proporción */
-  object-fit: cover;    /* recorta o expande para rellenar de forma agradable */
-  display: block;       /* quita espacios fantasmas de inline elements */
+.sustentabilidad-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-/* Contenido (h2 + p) en la mitad derecha */
-#sabiasQue > div {
-  width: 50%;
-  
-  /* Espacio interno para el texto */
-  padding: 2rem;
-  
-  /* Opcional: centrar verticalmente el texto */
+/* Texto a la derecha */
+.sustentabilidad-texto {
+  flex: 1 1 50%;
+  padding: 48px 48px 48px 48px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
-  text-align: left;
-  box-sizing: border-box;
+  background: #f7ecdb;
 }
 
-/* Título */
-#encabezadoSabiasQue {
-  font-size: 2rem;
-  margin: 0 0 1rem 0;
-  letter-spacing: 1px;
-  font-weight: 700;
-  color: #000;  /* o ajusta según tu paleta */
+.sustentabilidad-texto h2 {
+  font-size: 2.2em;
+  font-weight: bold;
+  margin-bottom: 18px;
+  color: #222;
+  /* font-family: 'Montserrat', Arial, sans-serif; */
+  border-bottom: 2px solid #222;
+  display: inline-block;
+  padding-bottom: 7px;
+  letter-spacing: 0.5px;
 }
 
-/* Párrafo */
-#sabiasQue p {
-  line-height: 1.6;
+.sustentabilidad-texto p {
+  font-size: 1.15em;
+  color: #222;
+  line-height: 1.7;
   margin: 0;
-  color: #333;
+  /* font-family: 'Montserrat', Arial, sans-serif; */
 }
 
-/* Responsividad: en móvil, imagen arriba y texto abajo */
-@media (max-width: 768px) {
-  #sabiasQue {
+.sustentabilidad-texto b.verde {
+  color: black;
+  font-weight: bold;
+}
+
+/* Responsive para móviles */
+@media (max-width: 900px) {
+
+  #sustentabilidad,
+  .sustentabilidad-container {
+    width: 100vw;
+    min-width: 0;
     flex-direction: column;
-    width: 90%;              /* Opcional: más ancho en móvil */
+    border-radius: 0;
+    max-width: 100vw;
   }
 
-  #sabiasQue img {
-    width: 100%;
-    /* Para forzar que ocupe la mitad vertical, puedes ajustar la altura si deseas:
-       height: 50vh; 
-       object-fit: cover; */
+  .sustentabilidad-img,
+  .sustentabilidad-texto {
+    max-width: 100vw;
+    padding: 24px 12px;
   }
 
-  #sabiasQue > div {
-    width: 100%;
-    padding: 1.5rem;        /* ajusta para que no se vea muy grande en móvil */
-    text-align: center;     /* si quieres centrar el texto en dispositivos pequeños */
-  }
-
-  #encabezadoSabiasQue {
-    font-size: 1.8rem;
-    margin-bottom: 0.75rem;
+  .sustentabilidad-img img {
+    height: 220px;
   }
 }
+
 
 
 /* 5️⃣ Newsletter */
 /* Overlay */
 .newsletter-popup-overlay {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
   display: none;
   align-items: center;
   justify-content: center;
@@ -438,7 +477,7 @@
   border-radius: 12px;
   max-width: 900px;
   width: 90vw;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   position: relative;
   padding: 0;
   overflow: hidden;
@@ -549,11 +588,13 @@
   .popup-content {
     flex-direction: column;
   }
+
   .popup-image img {
     width: 100%;
     height: 180px;
     object-fit: cover;
   }
+
   .popup-info {
     padding: 20px;
   }

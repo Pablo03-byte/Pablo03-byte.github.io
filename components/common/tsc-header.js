@@ -17,10 +17,6 @@ class TSCHeader extends HTMLElement {
                         <span class="hamburger-icon"><img src="/assets/icons/header/hamburguesa.svg" alt="Icono del menú de navegación"></span>
                     </button>
 
-                    <!-- Búsqueda -->
-                    <button id="botonBusqueda" class="boton-busqueda" aria-label="Abrir búsqueda">
-                        <span class="search-icon"><img src="/assets/icons/header/lupa.svg" alt="Icono de búsqueda"></span>
-                    </button>
                 </div>
     
                 <!-- Sección central: Logo -->
@@ -41,6 +37,11 @@ class TSCHeader extends HTMLElement {
                     <a id="botonCarrito" href="#" class="cart">
                         <span class="cart-icon"><img src="/assets/icons/header/carrito.svg" alt="Icono del carrito"></span>
                     </a>
+
+                    <!-- Búsqueda -->
+                    <button id="botonBusqueda" class="boton-busqueda" aria-label="Abrir búsqueda">
+                        <span class="search-icon"><img src="/assets/icons/header/lupa.svg" alt="Icono de búsqueda"></span>
+                    </button>
                 </div>
     
                 <!-- Menú lateral -->

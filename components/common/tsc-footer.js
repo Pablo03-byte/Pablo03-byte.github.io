@@ -20,7 +20,7 @@ class TSCFooter extends HTMLElement {
                 </div>
                 <div>
                     <img src="/assets/icons/footer/telefono.svg" alt="Icono de teléfono" />
-                    <p>+34 613 018 099</p>
+                    <p>+34 722 300 285</p>
                 </div>
                 <div>
                     <img src="/assets/icons/footer/correo.svg" alt="Icono de correo" />

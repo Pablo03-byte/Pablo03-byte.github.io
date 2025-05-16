@@ -29,7 +29,7 @@ class TSCHeader extends HTMLElement {
                 <!-- Sección derecha: Iconos de cuenta y carrito -->
                 <div class="nav-right">
                     <!-- Enlace a la página de perfil o de acceso -->
-                    <a id="botonUsuario" href="#" class="account">
+                    <a id="botonUsuario" href="/html/user/cuenta.html" class="account">
                         <span class="account-icon"><img src="/assets/icons/header/usuario.svg" alt="Icono de cuenta"></span>
                     </a>
             
@@ -57,6 +57,7 @@ class TSCHeader extends HTMLElement {
                             <li><a href="/html/user/acceso.html">Cuenta</a></li>
                             <li><a href="/html/about/nosotros.html">Nosotros</a></li>
                             <li><a href="mailto:hola@thesisterhoodclip.com">Contacto</a></li>
+                            <li><a href="/html/user/blog">Blog</a></li>
                         </ul>
                     </nav>
                 </div>

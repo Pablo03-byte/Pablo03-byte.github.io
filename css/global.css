@@ -99,8 +99,8 @@ header {
 
 .navbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem 2rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   min-height: 80px;
@@ -110,13 +110,16 @@ header {
 
 /* Logo */
 .nav-center {
-  width: 100%;
   max-width: 300px;
   margin: 0 auto;
   text-align: center;
   padding: 10px;
-  margin-right: 330px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
+
+
 
 #logo {
   height: 100%;

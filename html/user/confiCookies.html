@@ -60,6 +60,18 @@
             width: 800px;
         }
 
+        .hero-image-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('/assets/images/homepage/home-hero banner3.png');
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+            }
+
         body {
             background: #f7f7f7;
             margin: 0;
@@ -197,7 +209,7 @@
         <main>
             <!-- Hero banner -->
             <section class="hero-banner" style="position:relative;">
-                <img src="/assets/images/homepage/home-hero banner.png" alt="imagen principal">
+                <div class="hero-image-bg"></div> <!-- nueva capa para la imagen -->
                 <div class="hero-content"></div>
 
                 <div class="cookie-config-container">

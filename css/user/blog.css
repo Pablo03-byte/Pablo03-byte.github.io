@@ -102,9 +102,18 @@ html, body {
 
 .blog-titulo {
   text-align: center;
+  max-width: 800px;      /* Ajusta según prefieras */
+  margin: 0 auto;
+  font-size: clamp(1.5rem, 4vw, 2.5rem); /* Responsive */
+  padding: 0 1em;        /* Espaciado lateral en móviles */
+  line-height: 1.2;      /* Mejora la legibilidad */
+}
+
+.blog-titulo {
+  text-align: center;
   font-size: 1.5em;
   font-weight: bold;
-  margin-top: 0;
+  margin-top: 100;
   margin-bottom: 2em;
   
 }

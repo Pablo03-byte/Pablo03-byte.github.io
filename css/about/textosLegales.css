@@ -1,0 +1,71 @@
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2em 1em 3em 1em;
+  color: #2d2d2d;
+  background: #fff;
+}
+
+main .titulo-principal {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin-bottom: 1.5em;
+  color: black;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+main .legal-section {
+  margin-bottom: 2.5em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid #ececec;
+}
+
+main .legal-section:last-child {
+  border-bottom: none;
+}
+
+main h2 {
+  color: black;
+  font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+  margin-top: 1.5em;
+  margin-bottom: 0.7em;
+  font-weight: 600;
+}
+
+main h3 {
+  color: black;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  font-weight: 500;
+}
+
+main ul, main ol {
+  margin-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+main ul li, main ol li {
+  margin-bottom: 0.5em;
+}
+
+main a {
+  color: #670b1b;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 1em 0.2em 2em 0.2em;
+  }
+  main .titulo-principal {
+    font-size: 1.5rem;
+  }
+  main h2 {
+    font-size: 1.1rem;
+  }
+  main h3 {
+    font-size: 1rem;
+  }
+}

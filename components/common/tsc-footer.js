@@ -62,9 +62,9 @@ class TSCFooter extends HTMLElement {
             <img src="/assets/icons/footer/logo.svg" alt="Logo de The Sisterhood Clip">
             <nav>
                 <ul>
-                    <li><a href="#">Política de Privacidad</a></li>
-                    <li><a href="#">Condiciones de Uso</a></li>
-                    <li><a href="#">Política de Cookies</a></li>
+                    <li><a href="/html/about/textosLegales.html">Política de Privacidad</a></li>
+                    <li><a href="/html/about/textosLegales.html">Condiciones de Uso</a></li>
+                    <li><a href="/html/about/textosLegales.html">Política de Cookies</a></li>
                 </ul>
             </nav>
             <p>&copy; 2025 - The Sisterhood Clip S.L.</p>

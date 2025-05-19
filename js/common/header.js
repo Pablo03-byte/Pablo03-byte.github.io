@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("botonCarrito").addEventListener("click", () => alert("Bajo Construcción 🏗️"));
 
     // Redireccionar al hacer clic en el icono de usuario
-    document.getElementById("botonUsuario").addEventListener("click", (e) => redireccionarUsuario(e));
+    // document.getElementById("botonUsuario").addEventListener("click", (e) => redireccionarUsuario(e));
 });
 
 

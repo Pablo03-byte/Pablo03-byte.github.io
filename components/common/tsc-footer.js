@@ -39,6 +39,15 @@ class TSCFooter extends HTMLElement {
                 </nav>
             </article>
 
+            <article class="footer-section centro">
+                <h4>Tu Cuenta</h4>
+                <nav aria-label="Catálogo">
+                    <ul>
+                        <li><a href="/html/user/cuenta.html">Cuenta</a></li>
+                    </ul>
+                </nav>
+            </article>
+
             <article class="footer-section derecha">
                 <h4>Síguenos en...</h4>
                 <ul class="redes-sociales">
